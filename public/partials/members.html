@@ -1,0 +1,12 @@
+<div>
+  <h1>All Our Members</h1>
+  <div ng-repeat="user in users track by $index">
+    <h6>{{user.displayName}}</h6>
+    <img class='avatar' ng-src="{{user.picture}}" alt="">
+    <button ng-click="show($index)">Send Message</button>
+    <div ng-show="clicked===$index">
+      <textarea cols="30" rows="5" placeholder="Input Message"></textarea>
+      <button>Submit</button>
+    </div>
+  </div>
+</div>
